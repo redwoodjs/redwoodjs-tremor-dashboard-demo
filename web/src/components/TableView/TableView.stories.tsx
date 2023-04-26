@@ -13,10 +13,12 @@
 
 import type { ComponentMeta } from '@storybook/react'
 
+import { salesPeople } from 'src/data/salesPeople'
+
 import TableView from './TableView'
 
 export const generated = () => {
-  return <TableView />
+  return <TableView salesPeople={salesPeople} />
 }
 
 export default {

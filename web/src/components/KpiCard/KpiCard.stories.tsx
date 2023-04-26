@@ -13,12 +13,25 @@
 
 import type { ComponentMeta } from '@storybook/react'
 
+import { kpis } from 'src/data/kpis'
+
 import KpiCard from './KpiCard'
 
 export const generated = () => {
-  return <KpiCard />
+  return <KpiCard kpi={kpis[0]} />
 }
 
+export const moderateIncrease = () => {
+  return <KpiCard kpi={kpis[0]} />
+}
+
+export const increase = () => {
+  return <KpiCard kpi={kpis[1]} />
+}
+
+export const moderateDecrease = () => {
+  return <KpiCard kpi={kpis[2]} />
+}
 export default {
   title: 'Components/KpiCard',
   component: KpiCard,

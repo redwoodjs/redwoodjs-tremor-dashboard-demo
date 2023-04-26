@@ -13,10 +13,11 @@
 
 import type { ComponentMeta } from '@storybook/react'
 
-import ChartView from './ChartView'
+import { performance } from 'src/data/performance'
 
+import ChartView from './ChartView'
 export const generated = () => {
-  return <ChartView />
+  return <ChartView performance={performance} />
 }
 
 export default {
