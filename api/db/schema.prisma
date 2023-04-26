@@ -25,3 +25,15 @@ model CompanyPerformance {
   profit    Decimal
   customers Int
 }
+
+model SalesPerson {
+  id        Int    @id @default(autoincrement())
+  name      String
+  leads     Int
+  sales     String
+  quota     String
+  variance  String
+  region    String
+  status    String
+  deltaType String
+}

@@ -6,8 +6,7 @@ import { MetaTags } from '@redwoodjs/web'
 
 import ChartViewsCell from 'src/components/ChartViewsCell/ChartViewsCell'
 import KpisCell from 'src/components/KpisCell/KpisCell'
-import TableView from 'src/components/TableView/TableView'
-import { salesPeople } from 'src/data/salesPeople'
+import TableViewsCell from 'src/components/TableViewsCell/TableViewsCell'
 
 const DynamicDashboardPage = () => {
   const [selectedView, setSelectedView] = useState('1')
@@ -42,7 +41,7 @@ const DynamicDashboardPage = () => {
             </div>
           </>
         ) : (
-          <TableView salesPeople={salesPeople} />
+          <TableViewsCell />
         )}
       </main>
     </>

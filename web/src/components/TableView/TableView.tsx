@@ -3,7 +3,7 @@ import { useState } from 'react'
 import {
   BadgeDelta,
   Card,
-  DeltaType,
+  // DeltaType,
   Dropdown,
   DropdownItem,
   MultiSelectBox,
@@ -24,7 +24,7 @@ export type SalesPerson = {
   variance: string
   region: string
   status: string
-  deltaType: DeltaType
+  deltaType: string
 }
 
 interface Props {
