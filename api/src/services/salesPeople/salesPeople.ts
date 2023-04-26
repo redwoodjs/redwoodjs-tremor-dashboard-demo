@@ -3,7 +3,7 @@ import type { QueryResolvers, MutationResolvers } from 'types/graphql'
 import { db } from 'src/lib/db'
 
 export const salesPeople: QueryResolvers['salesPeople'] = () => {
-  return db.salesPerson.findMany()
+  return db.salesPerson.findMany({orderBy: { name: 'asc' }})
 }
 
 export const salesPerson: QueryResolvers['salesPerson'] = ({ id }) => {
