@@ -4,10 +4,9 @@ import { Grid, Tab, TabList, Text, Title } from '@tremor/react'
 
 import { MetaTags } from '@redwoodjs/web'
 
-import ChartView from 'src/components/ChartView/ChartView'
+import ChartViewsCell from 'src/components/ChartViewsCell/ChartViewsCell'
 import KpisCell from 'src/components/KpisCell/KpisCell'
 import TableView from 'src/components/TableView/TableView'
-import { performance } from 'src/data/performance'
 import { salesPeople } from 'src/data/salesPeople'
 
 const DynamicDashboardPage = () => {
@@ -39,7 +38,7 @@ const DynamicDashboardPage = () => {
             </Grid>
 
             <div className="mt-6">
-              <ChartView performance={performance} />
+              <ChartViewsCell />
             </div>
           </>
         ) : (

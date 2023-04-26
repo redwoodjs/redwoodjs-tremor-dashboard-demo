@@ -17,3 +17,11 @@ model Kpi {
   delta     String
   deltaType String
 }
+
+model CompanyPerformance {
+  id        Int     @id @default(autoincrement())
+  date      String
+  sales     Decimal
+  profit    Decimal
+  customers Int
+}

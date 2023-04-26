@@ -14,9 +14,9 @@ import {
 
 export type PerformanceData = {
   date: string
-  Sales: number
-  Profit: number
-  Customers: number
+  sales: number
+  profit: number
+  customers: number
 }
 
 interface Props {
@@ -31,7 +31,7 @@ const numberFormatter = (value: number) =>
   `${Intl.NumberFormat('us').format(value).toString()}`
 
 const ChartView = ({ performance }: Props) => {
-  const [selectedKpi, setSelectedKpi] = useState('Sales')
+  const [selectedKpi, setSelectedKpi] = useState('sales')
   // d = performance
   // map formatters by selectedKpi
   const formatters: { [key: string]: any } = {
@@ -64,9 +64,9 @@ const ChartView = ({ performance }: Props) => {
             defaultValue={selectedKpi}
             onValueChange={(value) => setSelectedKpi(value)}
           >
-            <ToggleItem value="Sales" text="Sales" />
-            <ToggleItem value="Profit" text="Profit" />
-            <ToggleItem value="Customers" text="Customers" />
+            <ToggleItem value="sales" text="Sales" />
+            <ToggleItem value="profit" text="Profit" />
+            <ToggleItem value="customers" text="Customers" />
           </Toggle>
         </div>
       </div>
