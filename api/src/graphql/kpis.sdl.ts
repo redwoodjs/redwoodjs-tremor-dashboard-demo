@@ -4,7 +4,7 @@ export const schema = gql`
     title: String!
     metric: String!
     progress: Float!
-    target: String!
+    metricTarget: String!
     delta: String!
     deltaType: String!
   }
@@ -18,7 +18,7 @@ export const schema = gql`
     title: String!
     metric: String!
     progress: Float!
-    target: String!
+    metricTarget: String!
     delta: String!
     deltaType: String!
   }
@@ -27,7 +27,7 @@ export const schema = gql`
     title: String
     metric: String
     progress: Float
-    target: String
+    metricTarget: String
     delta: String
     deltaType: String
   }

@@ -12,7 +12,7 @@ export type Kpi = {
   title: string
   metric: string
   progress: number
-  target: string
+  metricTarget: string
   delta: string
   deltaType: DeltaType
 }
@@ -35,7 +35,7 @@ const KpiCard = ({ kpi }: Props) => {
       </Flex>
       <Flex className="mt-4">
         <Text className="truncate">{`${kpi.progress}% (${kpi.metric})`}</Text>
-        <Text>{kpi.target}</Text>
+        <Text>{kpi.metricTarget}</Text>
       </Flex>
       <ProgressBar percentageValue={kpi.progress} className="mt-2" />
     </Card>

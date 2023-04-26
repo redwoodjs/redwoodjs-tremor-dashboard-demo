@@ -11,7 +11,7 @@ export const QUERY = gql`
       title
       metric
       progress
-      target
+      metricTarget
       delta
       deltaType
     }

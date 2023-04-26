@@ -9,13 +9,13 @@ generator client {
 }
 
 model Kpi {
-  id        Int     @id @default(autoincrement())
-  title     String
-  metric    String
-  progress  Decimal
-  target    String
-  delta     String
-  deltaType String
+  id           Int     @id @default(autoincrement())
+  title        String
+  metric       String
+  progress     Decimal
+  metricTarget String
+  delta        String
+  deltaType    String
 }
 
 model CompanyPerformance {

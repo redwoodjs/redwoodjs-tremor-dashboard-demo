@@ -45,7 +45,7 @@ const KpisList = ({ kpis }: FindKpis) => {
             <th>Title</th>
             <th>Metric</th>
             <th>Progress</th>
-            <th>Target</th>
+            <th>Metric target</th>
             <th>Delta</th>
             <th>Delta type</th>
             <th>&nbsp;</th>
@@ -58,7 +58,7 @@ const KpisList = ({ kpis }: FindKpis) => {
               <td>{truncate(kpi.title)}</td>
               <td>{truncate(kpi.metric)}</td>
               <td>{truncate(kpi.progress)}</td>
-              <td>{truncate(kpi.target)}</td>
+              <td>{truncate(kpi.metricTarget)}</td>
               <td>{truncate(kpi.delta)}</td>
               <td>{truncate(kpi.deltaType)}</td>
               <td>

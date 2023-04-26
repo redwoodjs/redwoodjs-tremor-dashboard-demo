@@ -89,22 +89,22 @@ const KpiForm = (props: KpiFormProps) => {
         <FieldError name="progress" className="rw-field-error" />
 
         <Label
-          name="target"
+          name="metricTarget"
           className="rw-label"
           errorClassName="rw-label rw-label-error"
         >
-          Target
+          Metric target
         </Label>
 
         <TextField
-          name="target"
-          defaultValue={props.kpi?.target}
+          name="metricTarget"
+          defaultValue={props.kpi?.metricTarget}
           className="rw-input"
           errorClassName="rw-input rw-input-error"
           validation={{ required: true }}
         />
 
-        <FieldError name="target" className="rw-field-error" />
+        <FieldError name="metricTarget" className="rw-field-error" />
 
         <Label
           name="delta"

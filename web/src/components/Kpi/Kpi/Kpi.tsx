@@ -62,8 +62,8 @@ const Kpi = ({ kpi }: Props) => {
               <td>{kpi.progress}</td>
             </tr>
             <tr>
-              <th>Target</th>
-              <td>{kpi.target}</td>
+              <th>Metric target</th>
+              <td>{kpi.metricTarget}</td>
             </tr>
             <tr>
               <th>Delta</th>

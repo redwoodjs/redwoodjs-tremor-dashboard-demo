@@ -14,7 +14,7 @@ export const QUERY = gql`
       title
       metric
       progress
-      target
+      metricTarget
       delta
       deltaType
     }
@@ -27,7 +27,7 @@ const UPDATE_KPI_MUTATION = gql`
       title
       metric
       progress
-      target
+      metricTarget
       delta
       deltaType
     }
@@ -43,7 +43,7 @@ export const Failure = ({ error }: CellFailureProps) => (
 export const Success = ({ kpi }: CellSuccessProps<EditKpiById>) => {
   const [updateKpi, { loading, error }] = useMutation(UPDATE_KPI_MUTATION, {
     onCompleted: () => {
-      // toast.success('Kpi updated')
+      toast.success('Kpi updated')
       navigate(routes.kpis())
     },
     onError: (error) => {
