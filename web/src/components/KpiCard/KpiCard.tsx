@@ -1,17 +1,12 @@
 import {
   BadgeDelta,
+  DeltaType,
   Card,
   Flex,
   Metric,
   ProgressBar,
   Text,
 } from '@tremor/react'
-
-export type DeltaType =
-  | 'increase'
-  | 'decrease'
-  | 'moderateIncrease'
-  | 'moderateDecrease'
 
 export type Kpi = {
   title: string
