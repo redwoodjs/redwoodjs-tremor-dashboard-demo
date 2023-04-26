@@ -17,7 +17,7 @@ export const schema = gql`
   input CreateKpiInput {
     title: String!
     metric: String!
-    progress: Float!
+    progress: Float
     metricTarget: String!
     delta: String!
     deltaType: String!

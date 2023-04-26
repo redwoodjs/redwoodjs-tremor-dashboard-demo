@@ -71,24 +71,6 @@ const KpiForm = (props: KpiFormProps) => {
         <FieldError name="metric" className="rw-field-error" />
 
         <Label
-          name="progress"
-          className="rw-label"
-          errorClassName="rw-label rw-label-error"
-        >
-          Progress
-        </Label>
-
-        <TextField
-          name="progress"
-          defaultValue={props.kpi?.progress}
-          className="rw-input"
-          errorClassName="rw-input rw-input-error"
-          validation={{ valueAsNumber: true, required: true }}
-        />
-
-        <FieldError name="progress" className="rw-field-error" />
-
-        <Label
           name="metricTarget"
           className="rw-label"
           errorClassName="rw-label rw-label-error"
