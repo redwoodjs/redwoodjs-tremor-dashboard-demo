@@ -35,7 +35,7 @@ describe('salesPeople', () => {
     const result = await createSalesPerson({
       input: {
         name: 'String',
-        leads: 5927721,
+        leads: 4453508,
         sales: 'String',
         quota: 'String',
         variance: 'String',
@@ -46,7 +46,7 @@ describe('salesPeople', () => {
     })
 
     expect(result.name).toEqual('String')
-    expect(result.leads).toEqual(5927721)
+    expect(result.leads).toEqual(4453508)
     expect(result.sales).toEqual('String')
     expect(result.quota).toEqual('String')
     expect(result.variance).toEqual('String')

@@ -6,7 +6,7 @@ export const standard = defineScenario<Prisma.SalesPersonCreateArgs>({
     one: {
       data: {
         name: 'String',
-        leads: 2260037,
+        leads: 3211613,
         sales: 'String',
         quota: 'String',
         variance: 'String',
@@ -18,7 +18,7 @@ export const standard = defineScenario<Prisma.SalesPersonCreateArgs>({
     two: {
       data: {
         name: 'String',
-        leads: 923557,
+        leads: 4808544,
         sales: 'String',
         quota: 'String',
         variance: 'String',

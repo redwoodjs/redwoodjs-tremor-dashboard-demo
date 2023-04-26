@@ -7,7 +7,7 @@ export const standard = defineScenario<Prisma.KpiCreateArgs>({
       data: {
         title: 'String',
         metric: 'String',
-        progress: 6449707.3096365165,
+        progress: 1874703.2311725141,
         target: 'String',
         delta: 'String',
         deltaType: 'String',
@@ -17,7 +17,7 @@ export const standard = defineScenario<Prisma.KpiCreateArgs>({
       data: {
         title: 'String',
         metric: 'String',
-        progress: 8938033.002605945,
+        progress: 2467605.0568852937,
         target: 'String',
         delta: 'String',
         deltaType: 'String',

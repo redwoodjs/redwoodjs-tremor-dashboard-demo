@@ -42,16 +42,16 @@ describe('companyPerformances', () => {
     const result = await createCompanyPerformance({
       input: {
         date: 'String',
-        sales: 5761634.78906294,
-        profit: 4442964.207661537,
-        customers: 5305792,
+        sales: 2494455.5866956785,
+        profit: 9237431.41915011,
+        customers: 1490105,
       },
     })
 
     expect(result.date).toEqual('String')
-    expect(result.sales).toEqual(new Prisma.Decimal(5761634.78906294))
-    expect(result.profit).toEqual(new Prisma.Decimal(4442964.207661537))
-    expect(result.customers).toEqual(5305792)
+    expect(result.sales).toEqual(new Prisma.Decimal(2494455.5866956785))
+    expect(result.profit).toEqual(new Prisma.Decimal(9237431.41915011))
+    expect(result.customers).toEqual(1490105)
   })
 
   scenario(

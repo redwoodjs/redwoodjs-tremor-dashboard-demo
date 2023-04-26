@@ -27,7 +27,7 @@ describe('kpis', () => {
       input: {
         title: 'String',
         metric: 'String',
-        progress: 492135.68300524144,
+        progress: 2051801.647964253,
         target: 'String',
         delta: 'String',
         deltaType: 'String',
@@ -36,7 +36,7 @@ describe('kpis', () => {
 
     expect(result.title).toEqual('String')
     expect(result.metric).toEqual('String')
-    expect(result.progress).toEqual(new Prisma.Decimal(492135.68300524144))
+    expect(result.progress).toEqual(new Prisma.Decimal(2051801.647964253))
     expect(result.target).toEqual('String')
     expect(result.delta).toEqual('String')
     expect(result.deltaType).toEqual('String')

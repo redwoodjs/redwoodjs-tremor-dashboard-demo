@@ -6,17 +6,17 @@ export const standard = defineScenario<Prisma.CompanyPerformanceCreateArgs>({
     one: {
       data: {
         date: 'String',
-        sales: 8843684.347021867,
-        profit: 9611808.510614885,
-        customers: 5625131,
+        sales: 4123311.0664987317,
+        profit: 9629717.225889865,
+        customers: 6552864,
       },
     },
     two: {
       data: {
         date: 'String',
-        sales: 3070413.2076589284,
-        profit: 7130760.773069442,
-        customers: 5044618,
+        sales: 3407878.1655372214,
+        profit: 6043919.859423452,
+        customers: 4763215,
       },
     },
   },
