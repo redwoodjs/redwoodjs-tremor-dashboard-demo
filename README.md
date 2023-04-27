@@ -1,3 +1,60 @@
+# Demo Dashboard with Tremor and RedwoodJS
+
+A RedwoodJS application that implements a static and dynamic version of Tremor's [Demo Dashboard](https://www.tremor.so/docs/getting-started/demo-dashboard) as seen in their Getting Started documentation.
+
+## How RedwoodJS setup Tremor
+
+1. Create a New Redwood App
+
+```
+yarn create redwood-app
+```
+
+2. Use the Redwood setup command to install TailwindCSS
+
+```
+yarn rw setup ui tailwindcss
+```
+
+3. Install tremor in the web workspace
+
+```
+yarn workspace web add @tremor/react
+```
+
+4. Install heroicons
+
+```
+yarn workspace web add @heroicons/react@1.0.6
+```
+
+5. Update tailwind config web/config/tailwind.config.js
+
+```
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    'src/**/*.{js,jsx,ts,tsx}',
+    '../node_modules/@tremor/**/*.{js,ts,jsx,tsx}',
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+Important: the path for node_modules is `../`
+
+6. Launch Dev Server
+
+```
+yarn rw dev
+```
+
+7. Implement Tremor Components
+
+---
 # README
 
 Welcome to [RedwoodJS](https://redwoodjs.com)!

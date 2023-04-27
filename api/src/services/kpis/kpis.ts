@@ -15,12 +15,17 @@ const parseDollarAmount = (amount: string) => {
 }
 
 const calculateProgress = ({ input }) => {
-  const metricValue = parseDollarAmount(input.metric);
-  const metricTargetValue = parseDollarAmount(input.metricTarget);
-  const progress = ((metricValue / metricTargetValue) * 100).toFixed(1);
+  try {
+    const metricValue = parseDollarAmount(input.metric);
+    const metricTargetValue = parseDollarAmount(input.metricTarget);
+    const progress = ((metricValue / metricTargetValue) * 100).toFixed(1);
 
-  return progress
+    return progress
+  } catch {
+    return 0
+  }
 }
+
 
 export const kpis: QueryResolvers['kpis'] = () => {
   return db.kpi.findMany()
@@ -42,7 +47,7 @@ export const createKpi: MutationResolvers['createKpi'] = ({ input }) => {
 
 export const updateKpi: MutationResolvers['updateKpi'] = ({ id, input }) => {
   const progress = calculateProgress({input})
-  logger.debug({progress}, 'updateKpi')
+
   return db.kpi.update({
     data: {... input, progress},
     where: { id },

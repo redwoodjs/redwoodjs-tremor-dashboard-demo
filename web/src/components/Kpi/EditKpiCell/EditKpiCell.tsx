@@ -34,6 +34,8 @@ const UPDATE_KPI_MUTATION = gql`
   }
 `
 
+
+
 export const Loading = () => <div>Loading...</div>
 
 export const Failure = ({ error }: CellFailureProps) => (
