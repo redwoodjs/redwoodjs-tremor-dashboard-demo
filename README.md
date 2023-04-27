@@ -4,7 +4,7 @@ A RedwoodJS application that implements a static and dynamic version of Tremor's
 
 ## Static and Dynamic
 
-There is a static data version of the dashboard as well as a dynamic version that pulls from a SQLite database for KPI, SalePeople and CompanyPerformance.
+There is a static data version of the dashboard as well as a dynamic version that pulls from a SQLite database for KPI, SalesPeople and CompanyPerformance.
 
 Scaffolding has been added to edit these datapoints so can be reflected in the dynamic dashboard.
 
