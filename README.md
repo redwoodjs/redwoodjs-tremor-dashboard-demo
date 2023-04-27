@@ -2,6 +2,12 @@
 
 A RedwoodJS application that implements a static and dynamic version of Tremor's [Demo Dashboard](https://www.tremor.so/docs/getting-started/demo-dashboard) as seen in their Getting Started documentation.
 
+### Static and Dynamic
+
+There is a static data version of the dashboard as well as a dynamic version that pulls from a SQLite database for KPI, SalePeople and CompanyPerformance.
+
+Scaffolding has been added to edit these datapoints so can be reflected in the dynamic dashboard.
+
 ## How RedwoodJS setup Tremor
 
 1. Create a New Redwood App
