@@ -6293,8 +6293,8 @@ __metadata:
   linkType: hard
 
 "@tremor/react@npm:^2.2.0":
-  version: 2.2.0
-  resolution: "@tremor/react@npm:2.2.0"
+  version: 2.4.0
+  resolution: "@tremor/react@npm:2.4.0"
   dependencies:
     "@floating-ui/react": ^0.19.1
     date-fns: ^2.28.0
@@ -6304,7 +6304,7 @@ __metadata:
   peerDependencies:
     react: ^18.0.0
     react-dom: ">=16.6.0"
-  checksum: af36b1fbea5d7ded8fad6976eaa4b013c7180428fb8ee95f6d44a3fe2f7a0834a2406bc19d1663ce7f05fb17ea7ed67d88b155926c353962a7b3226ee96965bd
+  checksum: 32ba4c084de439d85f36a96643fb94b1711a3813580114f68e7419a3fce373d4548aaadbaf89aa20a80ba0bad2aa481858cca9239d3a4b7246b071c4a70439fb
   languageName: node
   linkType: hard
 
