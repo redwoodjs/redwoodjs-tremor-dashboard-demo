@@ -154,7 +154,7 @@ yarn rw dev
 
 Your app will start up and you should see the Dashboard page with an area with two `Newsletter revenue over time (USD)` data series.
 
-# 3. Import and use a component
+# 3. Add a new component for a KPI Card
 
 Generate a component for a KPI (Key Performance Indicator) from your command line.
 
@@ -223,82 +223,45 @@ export default KpiCard
 
 # 4. Add the KPI Card component to your Dashboard
 
-First, update you `Dashboard` page to use `Grid` and `Col`
+Import the `KpiCard` component and `Kpi` type.
 
 ```tsx
-import { Grid, Col, Card, Title, AreaChart } from '@tremor/react'
-
-import { MetaTags } from '@redwoodjs/web'
-
-const DashboardPage = () => {
-  const chartdata = [
-    {
-      date: 'Jan 22',
-      SemiAnalysis: 2890,
-      'The Pragmatic Engineer': 2338,
-    },
-    {
-      date: 'Feb 22',
-      SemiAnalysis: 2756,
-      'The Pragmatic Engineer': 2103,
-    },
-    {
-      date: 'Mar 22',
-      SemiAnalysis: 3322,
-      'The Pragmatic Engineer': 2194,
-    },
-    {
-      date: 'Apr 22',
-      SemiAnalysis: 3470,
-      'The Pragmatic Engineer': 2108,
-    },
-    {
-      date: 'May 22',
-      SemiAnalysis: 3475,
-      'The Pragmatic Engineer': 1812,
-    },
-    {
-      date: 'Jun 22',
-      SemiAnalysis: 3129,
-      'The Pragmatic Engineer': 1726,
-    },
-  ]
-
-  const dataFormatter = (number: number) => {
-    return '$ ' + Intl.NumberFormat('us').format(number).toString()
-  }
-
-  return (
-    <div className="m-12">
-      <MetaTags title="Dashboard" description="Dashboard page" />
-
-      <h1 className="mb-12 text-2xl">Dashboard</h1>
-
-      <Grid numCols={1} numColsSm={2} numColsLg={3} className="my-8 gap-6">
-        <Col numColSpan={1} numColSpanLg={3}>
-          <Card>
-            <Title>Newsletter revenue over time (USD)</Title>
-            <AreaChart
-              className="mt-4 h-72"
-              data={chartdata}
-              index="date"
-              categories={['SemiAnalysis', 'The Pragmatic Engineer']}
-              colors={['indigo', 'green']}
-              valueFormatter={dataFormatter}
-            />
-          </Card>
-        </Col>
-      </Grid>
-    </div>
-  )
-}
-
-export default DashboardPage
+import KpiCard from 'src/components/KpiCard/KpiCard' // 👈 Import the KpiCard component
+import type { Kpi } from 'src/components/KpiCard/KpiCard' // 👈 Import the Kpi type
 ```
 
-Next, import the `KpiCard` component and `Kpi` type.
+Next, create the `kpi` data collection with sample data
 
-Create the `kpi` data collection and then iterate over the collection to add the `KpiCard` inside new `Col`:
+```tsx
+ const kpis: Kpi[] = [ // 👈 Create some sample KPI data
+    {
+      title: 'Sales',
+      metric: '$ 12,699',
+      progress: 15.9,
+      metricTarget: '$ 80,000',
+      delta: '13.2%',
+      deltaType: 'moderateIncrease',
+    },
+    {
+      title: 'Profit',
+      metric: '$ 45,564',
+      progress: 36.5,
+      metricTarget: '$ 125,000',
+      delta: '23.9%',
+      deltaType: 'increase',
+    },
+    {
+      title: 'Customers',
+      metric: '1,072',
+      progress: 53.6,
+      metricTarget: '2,000',
+      delta: '10.1%',
+      deltaType: 'moderateDecrease',
+    },
+  ]
+```
+
+Then iterate over the collection to add a `KpiCard` inside new `Col` for each KPI data item:
 
 ```tsx
   {kpis.map((kpi, i) => (
@@ -415,6 +378,8 @@ const DashboardPage = () => {
 
 export default DashboardPage
 ```
+
+Congratulations! You made your first dashboard.
 
 # 4. Next Steps
 
