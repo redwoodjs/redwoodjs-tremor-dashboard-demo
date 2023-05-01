@@ -28,7 +28,7 @@ const Routes = () => {
           <Route path="/company-performances/{id:Int}" page={CompanyPerformanceCompanyPerformancePage} name="companyPerformance" />
           <Route path="/company-performances" page={CompanyPerformanceCompanyPerformancesPage} name="companyPerformances" />
         </Set>
-        <Set wrap={ ScaffoldLayout} title="SalesPeople" titleTo="salesPeople" buttonLabel="New SalesPerson" buttonTo="newSalesPerson">
+        <Set wrap={ScaffoldLayout} title="SalesPeople" titleTo="salesPeople" buttonLabel="New SalesPerson" buttonTo="newSalesPerson">
           <Route path="/sales-people/new" page={SalesPersonNewSalesPersonPage} name="newSalesPerson" />
           <Route path="/sales-people/{id:Int}/edit" page={SalesPersonEditSalesPersonPage} name="editSalesPerson" />
           <Route path="/sales-people/{id:Int}" page={SalesPersonSalesPersonPage} name="salesPerson" />
@@ -36,7 +36,7 @@ const Routes = () => {
         </Set>
       </Set>
       <Set wrap={AnalyticsLayout}>
-        <Route path="/" page={DashboardPage} name="dashboard" />
+        <Route path="/dashboard" page={DashboardPage} name="dashboard" />
         <Route path="/dynamic-dashboard" page={DynamicDashboardPage} name="dynamicDashboard" />
       </Set>
       <Route notfound page={NotFoundPage} />
