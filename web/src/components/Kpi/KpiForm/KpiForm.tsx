@@ -12,9 +12,11 @@ import {
 } from '@redwoodjs/forms'
 import type { RWGqlError } from '@redwoodjs/forms'
 
+import DeltaTypesInput from 'src/components/DeltaTypesInput/DeltaTypesInput'
+
 type FormKpi = NonNullable<EditKpiById['kpi']>
 
-interface KpiFormProps {
+export interface KpiFormProps {
   kpi?: EditKpiById['kpi']
   onSave: (data: UpdateKpiInput, id?: FormKpi['id']) => void
   error: RWGqlError
@@ -116,31 +118,7 @@ const KpiForm = (props: KpiFormProps) => {
 
         <FieldError name="delta" className="rw-field-error" />
 
-        <Label
-          name="deltaType"
-          className="rw-label"
-          errorClassName="rw-label rw-label-error"
-        >
-          Delta type
-        </Label>
-        <div className="rw-check-radio-items">
-          {Object.entries(DeltaTypes).map(([key, value]) => {
-            return (
-              <>
-                <RadioField
-                  key={key}
-                  name="deltaType"
-                  defaultValue={value}
-                  defaultChecked={props.kpi?.deltaType?.includes(value)}
-                  className="rw-input"
-                  errorClassName="rw-input rw-input-error"
-                  validation={{ required: true }}
-                />
-                <div className="mr-6">{key}</div>
-              </>
-            )
-          })}
-        </div>
+        <DeltaTypesInput {...props} />
 
         <FieldError name="deltaType" className="rw-field-error" />
 
