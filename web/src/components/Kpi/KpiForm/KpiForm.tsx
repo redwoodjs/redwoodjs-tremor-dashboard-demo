@@ -1,3 +1,6 @@
+import { DeltaType } from '@tremor/react'
+import type { EditKpiById, UpdateKpiInput } from 'types/graphql'
+
 import {
   Form,
   FormError,
@@ -5,9 +8,8 @@ import {
   Label,
   TextField,
   Submit,
+  RadioField,
 } from '@redwoodjs/forms'
-
-import type { EditKpiById, UpdateKpiInput } from 'types/graphql'
 import type { RWGqlError } from '@redwoodjs/forms'
 
 type FormKpi = NonNullable<EditKpiById['kpi']>
@@ -17,6 +19,14 @@ interface KpiFormProps {
   onSave: (data: UpdateKpiInput, id?: FormKpi['id']) => void
   error: RWGqlError
   loading: boolean
+}
+
+export const DeltaTypes: { [key: string]: DeltaType } = {
+  Increase: 'increase',
+  ModerateIncrease: 'moderateIncrease',
+  Decrease: 'decrease',
+  ModerateDecrease: 'moderateDecrease',
+  Unchanged: 'unchanged',
 }
 
 const KpiForm = (props: KpiFormProps) => {
@@ -113,14 +123,24 @@ const KpiForm = (props: KpiFormProps) => {
         >
           Delta type
         </Label>
-
-        <TextField
-          name="deltaType"
-          defaultValue={props.kpi?.deltaType}
-          className="rw-input"
-          errorClassName="rw-input rw-input-error"
-          validation={{ required: true }}
-        />
+        <div className="rw-check-radio-items">
+          {Object.entries(DeltaTypes).map(([key, value]) => {
+            return (
+              <>
+                <RadioField
+                  key={key}
+                  name="deltaType"
+                  defaultValue={value}
+                  defaultChecked={props.kpi?.deltaType?.includes(value)}
+                  className="rw-input"
+                  errorClassName="rw-input rw-input-error"
+                  validation={{ required: true }}
+                />
+                <div className="mr-6">{key}</div>
+              </>
+            )
+          })}
+        </div>
 
         <FieldError name="deltaType" className="rw-field-error" />
 
