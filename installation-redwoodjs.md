@@ -32,7 +32,7 @@ Install tremor in the web workspace from your command line via yarn.
 yarn workspace web add @tremor/react
 ```
 
-Install heroicons version 1.0.6 from your command line via yarn.
+Install `heroicons version 1.0.6` from your command line via yarn.
 
 ```bash
 yarn workspace web add @heroicons/react@1.0.6
