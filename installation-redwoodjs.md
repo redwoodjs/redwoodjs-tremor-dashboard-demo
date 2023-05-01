@@ -19,14 +19,14 @@ If you do not want a TypeScript project, omit the `--ts` flag.
 > **Important:** RedwoodJS prefers yarn over npm because a project is monorepo with api and web workspaces.  You will install tremor and other web packages using yarn workspaces.
 
 
-Use the Redwood setup command to install TailwindCSS, its peer dependencies, and create the `tailwind.config.js` file.
+Use the Redwood setup command to install `TailwindCSS`, its peer dependencies, and create the `tailwind.config.js` file.
 
 
 ```bash
 yarn rw setup ui tailwindcss
 ```
 
-Install tremor in the web workspace from your command line via yarn.
+Install `tremor` in the web workspace from your command line via yarn.
 
 ```bash
 yarn workspace web add @tremor/react
