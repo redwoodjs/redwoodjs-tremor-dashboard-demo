@@ -37,14 +37,19 @@ yarn install
 ```bash
 yarn rw prisma migrate dev
 ```
+4. Seed the Database
 
-4. Start the RedwoodJS Development Server
+```bash
+yarn rw prisma db seed
+```
+
+5. Start the RedwoodJS Development Server
 
 ```bash
 yarn rw dev
 ```
 
-The application will laucnh and then you can browse the static and dynamic versions of teh dashboard, as well as update the data in the admin sections.
+The application will launch and then you can browse the static and dynamic versions of teh dashboard, as well as update the data in the admin sections.
 
 ## RedwoodJS and Tremor Setup
 
