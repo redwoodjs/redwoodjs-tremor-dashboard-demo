@@ -38,7 +38,7 @@ yarn install
 yarn rw prisma migrate dev
 ```
 
-4. Start the RedwoodJS Developemnt Server
+4. Start the RedwoodJS Development Server
 
 ```bash
 yarn rw dev
