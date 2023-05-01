@@ -29,9 +29,7 @@ const KpiCard = ({ kpi }: Props) => {
           <Text>{kpi.title}</Text>
           <Metric>{kpi.metric}</Metric>
         </div>
-        <BadgeDelta className="p-2" deltaType={kpi.deltaType}>
-          {kpi.delta}
-        </BadgeDelta>
+        <BadgeDelta deltaType={kpi.deltaType}>{kpi.delta}</BadgeDelta>
       </Flex>
       <Flex className="mt-4">
         <Text className="truncate">{`${kpi.progress}% (${kpi.metric})`}</Text>

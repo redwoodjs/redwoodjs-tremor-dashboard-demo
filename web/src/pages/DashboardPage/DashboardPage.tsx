@@ -37,7 +37,6 @@ const DashboardPage = () => {
           <>
             <Grid numColsLg={3} className="mt-6 gap-6">
               {kpis.map((kpi) => (
-                // eslint-disable-next-line react/jsx-key
                 <KpiCard key={kpi.title} kpi={kpi} />
               ))}
             </Grid>
