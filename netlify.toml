@@ -1,5 +1,5 @@
 [build]
-  command = "yarn rw deploy netlify && yarn rw prisma migrate reset"
+  command = "yarn rw deploy netlify && yarn rw prisma db seed"
   publish = "web/dist"
   functions = "api/dist/functions"
 

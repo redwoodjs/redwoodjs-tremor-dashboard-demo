@@ -6,9 +6,9 @@ import { salesPeople } from 'web/src/data/salesPeople'
 
 export default async () => {
   try {
-    console.log(
-      "\nUsing the default './scripts/seed.{js,ts}' template\nEdit the file to add seed data\n"
-    )
+    console.log('Reloading ... \n')
+
+    await db.kpi.deleteMany()
 
     Promise.all(
       kpis.map(async (data: Prisma.KpiCreateArgs['data']) => {
@@ -17,6 +17,7 @@ export default async () => {
       })
     )
 
+    await db.companyPerformance.deleteMany()
     Promise.all(
       performance.map(
         async (data: Prisma.CompanyPerformanceCreateArgs['data']) => {
@@ -26,12 +27,16 @@ export default async () => {
       )
     )
 
+    await db.salesPerson.deleteMany()
+
     Promise.all(
       salesPeople.map(async (data: Prisma.SalesPersonCreateArgs['data']) => {
         const record = await db.salesPerson.create({ data })
         console.log(record)
       })
     )
+
+    console.log('Done!\n')
   } catch (error) {
     console.warn('Please define your seed data.')
     console.error(error)
