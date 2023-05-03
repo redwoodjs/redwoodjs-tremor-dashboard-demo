@@ -38,6 +38,7 @@ const Routes = () => {
       <Set wrap={AnalyticsLayout}>
         <Route path="/" page={DashboardPage} name="dashboard" />
         <Route path="/dynamic-dashboard" page={DynamicDashboardPage} name="dynamicDashboard" />
+        <Route path="/about" page={AboutPage} name="about" />
       </Set>
       <Route notfound page={NotFoundPage} />
     </Router>
