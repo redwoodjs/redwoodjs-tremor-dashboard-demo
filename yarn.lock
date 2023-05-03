@@ -3717,7 +3717,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@netlify/functions@npm:^1.4.0":
+"@netlify/functions@npm:1.4.0":
   version: 1.4.0
   resolution: "@netlify/functions@npm:1.4.0"
   dependencies:
@@ -8018,7 +8018,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "api@workspace:api"
   dependencies:
-    "@netlify/functions": ^1.4.0
+    "@netlify/functions": 1.4.0
     "@redwoodjs/api": 5.0.3
     "@redwoodjs/graphql-server": 5.0.3
   languageName: unknown
