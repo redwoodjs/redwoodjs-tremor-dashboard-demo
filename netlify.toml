@@ -1,5 +1,5 @@
 [build]
-  command = "yarn rw deploy netlify"
+  command = "yarn rw deploy netlify && yarn rw prisma migrate reset"
   publish = "web/dist"
   functions = "api/dist/functions"
 
@@ -19,3 +19,7 @@
   from = "/*"
   to = "/200.html"
   status = 200
+
+[functions."redeploySiteViaHook"]
+schedule = "@hourly"
+

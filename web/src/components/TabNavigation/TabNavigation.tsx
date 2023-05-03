@@ -1,13 +1,13 @@
 import { NavLink, routes } from '@redwoodjs/router'
 
 const TabNavigation = () => {
-
   const tabs = [
     { name: 'Static', href: routes.dashboard() },
     { name: 'Dynamic', href: routes.dynamicDashboard() },
-    {name: 'Sales People', href: routes.salesPeople()},
-    {name: 'Company Performance', href: routes.companyPerformances()},
-    {name: 'KPI', href: routes.kpis()},
+    { name: 'Sales People', href: routes.salesPeople() },
+    { name: 'Company Performance', href: routes.companyPerformances() },
+    { name: 'KPI', href: routes.kpis() },
+    { name: 'About', href: routes.about() },
   ]
 
   function classNames(...classes) {
@@ -40,7 +40,7 @@ const TabNavigation = () => {
                 key={tab.name}
                 to={tab.href}
                 activeClassName="whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium border-blue-500 text-blue-500"
-                className="whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium border-transparent text-gray-500 hover:border-blue-300 hover:text-blue-700"
+                className="whitespace-nowrap border-b-2 border-transparent px-1 py-4 text-sm font-medium text-gray-500 hover:border-blue-300 hover:text-blue-700"
               >
                 {tab.name}
               </NavLink>

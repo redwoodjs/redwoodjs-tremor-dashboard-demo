@@ -1,9 +1,27 @@
 ---
-section: "Getting Started"
-name: "Installation RedwoodJS"
+description: "Learn how to build dashboards fast using the termor React library of data visualization components."
 ---
 
-## Using RedwoodJS
+# Build Dashboards Fast with Tremor
+
+[Tremor](https://www.tremor.so) is a React library to build dashboards fast. Its modular components are fully open-source, made by data scientists and software engineers with a sweet spot for design.
+
+In this how to, you'll learn how to
+
+* setup tremor in a new or existing RedwoodJS app
+* use tremor components to layout a new dashboard
+* use a chart and card component to visualize static data
+* access a GitHub repo to make your dashboard dynamic using an [example RedwoodJS app](https://github.com/redwoodjs/redwoodjs-tremor-dashboard-demo)
+
+## Live Demo
+
+See what's possible with a [dynamic dashboard live demo](https://tremor-redwood-dashboard-demo.netlify.app) build with RedwoodJS and Tremor.
+
+Cool, right?
+
+Let's get started!
+
+## Create a New RedwoodJS Project
 
 
 In our terminal, we create a new RedwoodJS project:
@@ -56,7 +74,7 @@ module.exports = {
 
 > **Note:** the path for node_modules is `../` because the web workspace is in a subdirectory of the root directory.
 
-# 2. Add a Dashboard Page
+## Add a Dashboard Page
 
 Generate a page from your command line.
 
@@ -154,7 +172,7 @@ yarn rw dev
 
 Your app will start up and you should see the Dashboard page with an area with two `Newsletter revenue over time (USD)` data series.
 
-# 3. Add a new component for a KPI Card
+## Add a new component for a KPI Card
 
 Generate a component for a KPI (Key Performance Indicator) from your command line.
 
@@ -221,7 +239,7 @@ const KpiCard = ({ kpi }: Props) => {
 export default KpiCard
 ```
 
-# 4. Add the KPI Card component to your Dashboard
+## Add the KPI Card component to your Dashboard
 
 Import the `KpiCard` component and `Kpi` type.
 
@@ -381,7 +399,7 @@ export default DashboardPage
 
 Congratulations! You made your first dashboard.
 
-# 4. Next Steps
+## Next Steps
 
 Now that you have a Dashboard
 
@@ -389,4 +407,4 @@ Now that you have a Dashboard
 
 2. Learn how to make a [dynamic dashboard using RedwoodJS cells](https://github.com/redwoodjs/redwoodjs-tremor-dashboard-demo) to fetch data from a Prisma-backed database using GraphQL.
 
-
+3. See a [dynamic dashboard live demo](https://tremor-redwood-dashboard-demo.netlify.app)!
