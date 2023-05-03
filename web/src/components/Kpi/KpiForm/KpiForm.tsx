@@ -1,4 +1,3 @@
-import { DeltaType } from '@tremor/react'
 import type { EditKpiById, UpdateKpiInput } from 'types/graphql'
 
 import {
@@ -8,7 +7,6 @@ import {
   Label,
   TextField,
   Submit,
-  RadioField,
 } from '@redwoodjs/forms'
 import type { RWGqlError } from '@redwoodjs/forms'
 
@@ -21,14 +19,6 @@ export interface KpiFormProps {
   onSave: (data: UpdateKpiInput, id?: FormKpi['id']) => void
   error: RWGqlError
   loading: boolean
-}
-
-export const DeltaTypes: { [key: string]: DeltaType } = {
-  Increase: 'increase',
-  ModerateIncrease: 'moderateIncrease',
-  Decrease: 'decrease',
-  ModerateDecrease: 'moderateDecrease',
-  Unchanged: 'unchanged',
 }
 
 const KpiForm = (props: KpiFormProps) => {
@@ -119,8 +109,6 @@ const KpiForm = (props: KpiFormProps) => {
         <FieldError name="delta" className="rw-field-error" />
 
         <DeltaTypesInput {...props} />
-
-        <FieldError name="deltaType" className="rw-field-error" />
 
         <div className="rw-button-group">
           <Submit disabled={props.loading} className="rw-button rw-button-blue">
