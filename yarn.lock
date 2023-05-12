@@ -3717,12 +3717,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@netlify/functions@npm:1.4.0":
-  version: 1.4.0
-  resolution: "@netlify/functions@npm:1.4.0"
+"@netlify/functions@npm:1.6.0":
+  version: 1.6.0
+  resolution: "@netlify/functions@npm:1.6.0"
   dependencies:
     is-promise: ^4.0.0
-  checksum: 644a7e974390e6bab5e651ffc4a4453f7c0e4a424a4dca1e02fe6b3d270b15f3795dec3526a549071c593e2bdd13760b728d02117c8f9677fa19fe1f0d192e80
+  checksum: cdff462e92c49eef6260bb60eabc8f18f8d558126105f9383b26c6c795f04e5c2bd9fbc1de7406bf1059855e356ae788bc13fb0e80195546331c404864135462
   languageName: node
   linkType: hard
 
@@ -8018,7 +8018,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "api@workspace:api"
   dependencies:
-    "@netlify/functions": 1.4.0
+    "@netlify/functions": 1.6.0
     "@redwoodjs/api": 5.0.3
     "@redwoodjs/graphql-server": 5.0.3
   languageName: unknown
