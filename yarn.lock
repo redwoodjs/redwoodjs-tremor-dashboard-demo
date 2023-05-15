@@ -6113,9 +6113,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tremor/react@npm:2.4.0":
-  version: 2.4.0
-  resolution: "@tremor/react@npm:2.4.0"
+"@tremor/react@npm:2.6.1":
+  version: 2.6.1
+  resolution: "@tremor/react@npm:2.6.1"
   dependencies:
     "@floating-ui/react": ^0.19.1
     date-fns: ^2.28.0
@@ -6125,7 +6125,7 @@ __metadata:
   peerDependencies:
     react: ^18.0.0
     react-dom: ">=16.6.0"
-  checksum: 32ba4c084de439d85f36a96643fb94b1711a3813580114f68e7419a3fce373d4548aaadbaf89aa20a80ba0bad2aa481858cca9239d3a4b7246b071c4a70439fb
+  checksum: 9411584ef562f487c739a18db1904f3944d0082595631d673333feef012aa4a4ea6de08d04296ac6d8a6ba209108d66fe5bc75579f90173166695baee0fb6bbd
   languageName: node
   linkType: hard
 
@@ -24762,7 +24762,7 @@ __metadata:
     "@redwoodjs/router": 5.0.3
     "@redwoodjs/web": 5.0.3
     "@tailwindcss/forms": 0.5.3
-    "@tremor/react": 2.4.0
+    "@tremor/react": 2.6.1
     autoprefixer: 10.4.14
     date-fns: ^2.30.0
     humanize-string: 2.1.0
