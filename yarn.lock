@@ -20081,9 +20081,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-loader@npm:7.3.0":
-  version: 7.3.0
-  resolution: "postcss-loader@npm:7.3.0"
+"postcss-loader@npm:7.3.1":
+  version: 7.3.1
+  resolution: "postcss-loader@npm:7.3.1"
   dependencies:
     cosmiconfig: ^8.1.3
     jiti: ^1.18.2
@@ -20092,7 +20092,7 @@ __metadata:
   peerDependencies:
     postcss: ^7.0.0 || ^8.0.1
     webpack: ^5.0.0
-  checksum: 81e9538aae14bedf1e8fa9700681f40bca71184f4d07c8c58ffd274cf3e15351234c1d0e7baa88b6e5d0cd5bea4abf9a6ae3271dba06ae575624cb387db4e833
+  checksum: 3713d58a6149013b7df8498322986ed472a65e1a4b84c6c0ad15a074d718c03d5d1df5f16e6ecf6396d00c2050e0d2b829d92e054e2aafcd6eff963d6f2e50ed
   languageName: node
   linkType: hard
 
@@ -25173,7 +25173,7 @@ __metadata:
     date-fns: ^2.30.0
     humanize-string: 2.1.0
     postcss: 8.4.23
-    postcss-loader: 7.3.0
+    postcss-loader: 7.3.1
     prop-types: 15.8.1
     react: 18.2.0
     react-dom: 18.2.0
