@@ -14,9 +14,9 @@
   },
   "dependencies": {
     "@heroicons/react": "1.0.6",
-    "@redwoodjs/forms": "5.2.3",
-    "@redwoodjs/router": "5.2.3",
-    "@redwoodjs/web": "5.2.3",
+    "@redwoodjs/forms": "6.1.0",
+    "@redwoodjs/router": "6.1.0",
+    "@redwoodjs/web": "6.1.0",
     "@tailwindcss/forms": "0.5.3",
     "@tremor/react": "2.9.1",
     "date-fns": "^2.30.0",
@@ -26,6 +26,7 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@redwoodjs/vite": "6.1.0",
     "autoprefixer": "10.4.14",
     "postcss": "8.4.23",
     "postcss-loader": "7.3.1",
