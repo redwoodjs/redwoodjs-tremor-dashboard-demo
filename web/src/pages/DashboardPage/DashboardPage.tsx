@@ -19,8 +19,6 @@ import { performance } from 'src/data/performance'
 import { salesPeople } from 'src/data/salesPeople'
 
 const DashboardPage = () => {
-  // const [selectedView, setSelectedView] = useState('1')
-
   return (
     <>
       <MetaTags

@@ -138,13 +138,19 @@ const SalesPersonForm = (props: SalesPersonFormProps) => {
           Region
         </Label>
 
-        <TextField
+        <SelectField
           name="region"
           defaultValue={props.salesPerson?.region}
           className="rw-input"
           errorClassName="rw-input rw-input-error"
           validation={{ required: true }}
-        />
+        >
+          {['A', 'B', 'C', 'D', 'E', 'F', 'G'].map((region) => (
+            <option key={`region-$region}`} value={`Region ${region}`}>
+              Region {region}
+            </option>
+          ))}
+        </SelectField>
 
         <FieldError name="region" className="rw-field-error" />
 

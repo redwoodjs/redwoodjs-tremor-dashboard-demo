@@ -46,7 +46,10 @@ export default function ChartView({
       try {
         return { ...item, date: format(item.date, 'MMM dd') }
       } catch {
-        return { ...item, date: format(parseISO(item.date), 'MMM dd') }
+        return {
+          ...item,
+          date: format(parseISO(item.date as unknown as string), 'MMM dd'),
+        }
       }
     })
   }
