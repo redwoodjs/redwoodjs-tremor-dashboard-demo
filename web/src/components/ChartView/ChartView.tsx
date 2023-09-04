@@ -12,6 +12,7 @@ import {
   Text,
   Color,
 } from '@tremor/react'
+import { format, parseISO } from 'date-fns'
 
 const usNumberformatter = (number: number, decimals = 0) =>
   Intl.NumberFormat('us', {
@@ -40,9 +41,19 @@ export default function ChartView({
   const [selectedIndex, setSelectedIndex] = useState(0)
   const selectedKpi = kpiList[selectedIndex]
 
+  const formatPerformance = (performance: DailyPerformance[]) => {
+    return performance.map((item) => {
+      try {
+        return { ...item, date: format(item.date, 'MMM dd') }
+      } catch {
+        return { ...item, date: format(parseISO(item.date), 'MMM dd') }
+      }
+    })
+  }
+
   const areaChartArgs = {
     className: 'mt-5 h-72',
-    data: performance,
+    data: formatPerformance(performance),
     index: 'date',
     categories: [selectedKpi],
     colors: ['blue'] as Color[],
