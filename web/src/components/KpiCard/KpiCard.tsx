@@ -1,6 +1,5 @@
 import {
   BadgeDelta,
-  DeltaType,
   Card,
   Flex,
   Metric,
@@ -35,7 +34,7 @@ const KpiCard = ({ kpi }: Props) => {
         <Text className="truncate">{`${kpi.progress}% (${kpi.metric})`}</Text>
         <Text>{kpi.metricTarget}</Text>
       </Flex>
-      <ProgressBar percentageValue={kpi.progress} className="mt-2" />
+      <ProgressBar value={kpi.progress} className="mt-2" />
     </Card>
   )
 }

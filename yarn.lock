@@ -3513,6 +3513,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@headlessui/react@npm:^1.7.14":
+  version: 1.7.17
+  resolution: "@headlessui/react@npm:1.7.17"
+  dependencies:
+    client-only: ^0.0.1
+  peerDependencies:
+    react: ^16 || ^17 || ^18
+    react-dom: ^16 || ^17 || ^18
+  checksum: a17d819e8c7aca764479eba1bd1bfe28d9f99ce4c16a296986f902ee040e57e242bd21d525570118c318cf1f013c9b56c6568980686774ca1881e82ca5cdeebe
+  languageName: node
+  linkType: hard
+
+"@headlessui/tailwindcss@npm:^0.1.3":
+  version: 0.1.3
+  resolution: "@headlessui/tailwindcss@npm:0.1.3"
+  peerDependencies:
+    tailwindcss: ^3.0
+  checksum: 55e1d8528fe995d13afafdb07d86f11dd367d6c7ba1a9780872495a8392170f2aa7c908be450a4c533b33b840849ed6399f6ff23243ea7df6eb4651340855609
+  languageName: node
+  linkType: hard
+
 "@heroicons/react@npm:1.0.6":
   version: 1.0.6
   resolution: "@heroicons/react@npm:1.0.6"
@@ -5269,19 +5290,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tremor/react@npm:2.9.1":
-  version: 2.9.1
-  resolution: "@tremor/react@npm:2.9.1"
+"@tremor/react@npm:3.6.6":
+  version: 3.6.6
+  resolution: "@tremor/react@npm:3.6.6"
   dependencies:
     "@floating-ui/react": ^0.19.1
+    "@headlessui/react": ^1.7.14
+    "@headlessui/tailwindcss": ^0.1.3
     date-fns: ^2.28.0
+    react-day-picker: ^8.7.1
     react-transition-group: ^4.4.5
-    recharts: ^2.3.2
+    recharts: ^2.7.1
     tailwind-merge: ^1.9.1
   peerDependencies:
     react: ^18.0.0
     react-dom: ">=16.6.0"
-  checksum: d1ba73cd5d0b76daf255d74fbae6388d638844d06313730aebd4961bb36069141b08569584dc0ff0eeec00ada314e9eab76dc41a84f24392d6d00a575f301a93
+  checksum: b67bdef578bd709789f45060e0a46686265963db66f37a1cbcef58bbd56d09025e0c1bb65bd8bb4c960891c60f675e4abc4361fe3cce593136aeef3dbaccc5fd
   languageName: node
   linkType: hard
 
@@ -8689,6 +8713,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"client-only@npm:^0.0.1":
+  version: 0.0.1
+  resolution: "client-only@npm:0.0.1"
+  checksum: 9d6cfd0c19e1c96a434605added99dff48482152af791ec4172fb912a71cff9027ff174efd8cdb2160cc7f377543e0537ffc462d4f279bc4701de3f2a3c4b358
+  languageName: node
+  linkType: hard
+
 "cliui@npm:^6.0.0":
   version: 6.0.0
   resolution: "cliui@npm:6.0.0"
@@ -9726,7 +9757,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"date-fns@npm:^2.28.0, date-fns@npm:^2.30.0":
+"date-fns@npm:2.30.0, date-fns@npm:^2.28.0, date-fns@npm:^2.30.0":
   version: 2.30.0
   resolution: "date-fns@npm:2.30.0"
   dependencies:
@@ -17909,6 +17940,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-day-picker@npm:^8.7.1":
+  version: 8.8.1
+  resolution: "react-day-picker@npm:8.8.1"
+  peerDependencies:
+    date-fns: ^2.28.0
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: 57e2aafdc3597115a8c74b3110f65a710d462c1996b299aae4b27108707e1c57f1780c912e2b8a94a13cbc761cfab3541dd60538b60cd668b30ded3aed14d22d
+  languageName: node
+  linkType: hard
+
 "react-dom@npm:18.2.0":
   version: 18.2.0
   resolution: "react-dom@npm:18.2.0"
@@ -18180,9 +18221,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"recharts@npm:^2.3.2":
-  version: 2.5.0
-  resolution: "recharts@npm:2.5.0"
+"recharts@npm:^2.7.1":
+  version: 2.8.0
+  resolution: "recharts@npm:2.8.0"
   dependencies:
     classnames: ^2.2.5
     eventemitter3: ^4.0.1
@@ -18197,7 +18238,7 @@ __metadata:
     prop-types: ^15.6.0
     react: ^16.0.0 || ^17.0.0 || ^18.0.0
     react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0
-  checksum: f887eccd1f861d85eb894f298fe2363ac1c51dfc0c6d64b7804a556ad6bed287a34781af396d2c796213ccb2b37e67512fe5b99f92f7c2456045bd3f2ae86742
+  checksum: 9f78bdf67fd5394f472a37679d2f9c9194f1d572c5bc086caae578409fceb7bc87a4df07dd096820c103d2002d9714c8db838c99b2722950ab9edab38be2daf9
   languageName: node
   linkType: hard
 
@@ -21368,9 +21409,9 @@ __metadata:
     "@redwoodjs/vite": 6.1.0
     "@redwoodjs/web": 6.1.0
     "@tailwindcss/forms": 0.5.3
-    "@tremor/react": 2.9.1
+    "@tremor/react": 3.6.6
     autoprefixer: 10.4.14
-    date-fns: ^2.30.0
+    date-fns: 2.30.0
     humanize-string: 2.1.0
     postcss: 8.4.23
     postcss-loader: 7.3.1

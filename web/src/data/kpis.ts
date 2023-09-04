@@ -1,5 +1,13 @@
 import type { Kpi } from 'src/components/KpiCard/KpiCard'
 
+export const Kpis = {
+  Sales: 'Sales',
+  Profit: 'Profit',
+  Customers: 'Customers',
+}
+
+export const kpiList = [Kpis.Sales, Kpis.Profit, Kpis.Customers]
+
 export const kpis: Kpi[] = [
   {
     title: 'Sales',
