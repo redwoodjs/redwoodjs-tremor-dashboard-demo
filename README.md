@@ -9,7 +9,7 @@ See a [live demo](https://tremor-redwood-dashboard-demo.netlify.app) dashboard!
 
 There is a static data version of the dashboard as well as a dynamic version that pulls from a SQLite database for KPI, SalesPeople and CompanyPerformance.
 
-Scaffolding has been added to edit these datapoints so can be reflected in the dynamic dashboard.
+Scaffolding has been added to edit these data points so can be reflected in the dynamic dashboard.
 
 ### Static Screens
 
