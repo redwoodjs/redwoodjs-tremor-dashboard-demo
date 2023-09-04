@@ -13,9 +13,9 @@ CREATE TABLE "Kpi" (
 CREATE TABLE "CompanyPerformance" (
     "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     "date" DATETIME NOT NULL,
-    "sales" DECIMAL NOT NULL,
-    "profit" DECIMAL NOT NULL,
-    "customers" INTEGER NOT NULL
+    "Sales" DECIMAL NOT NULL,
+    "Profit" DECIMAL NOT NULL,
+    "Customers" INTEGER NOT NULL
 );
 
 -- CreateTable
