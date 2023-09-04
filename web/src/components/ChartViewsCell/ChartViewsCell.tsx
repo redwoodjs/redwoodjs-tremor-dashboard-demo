@@ -4,15 +4,16 @@ import type { CellSuccessProps, CellFailureProps } from '@redwoodjs/web'
 
 import ChartView from 'src/components/ChartView/ChartView'
 import { kpiList } from 'src/data/kpis'
+import { DailyPerformance } from 'src/data/performance'
 
 export const QUERY = gql`
   query ChartViewsQuery {
     companyPerformances {
       id
       date
-      Sales: sales
-      Profit: profit
-      Customers: customers
+      Sales
+      Profit
+      Customers
     }
   }
 `
@@ -28,5 +29,10 @@ export const Failure = ({ error }: CellFailureProps) => (
 export const Success = ({
   companyPerformances,
 }: CellSuccessProps<ChartViewsQuery>) => {
-  return <ChartView performance={companyPerformances} kpiList={kpiList} />
+  return (
+    <ChartView
+      performance={companyPerformances as unknown as DailyPerformance[]}
+      kpiList={kpiList}
+    />
+  )
 }

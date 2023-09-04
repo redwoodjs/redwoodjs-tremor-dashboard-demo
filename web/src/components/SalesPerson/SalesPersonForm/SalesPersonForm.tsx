@@ -1,3 +1,5 @@
+import type { EditSalesPersonById, UpdateSalesPersonInput } from 'types/graphql'
+
 import {
   Form,
   FormError,
@@ -6,9 +8,8 @@ import {
   TextField,
   NumberField,
   Submit,
+  SelectField,
 } from '@redwoodjs/forms'
-
-import type { EditSalesPersonById, UpdateSalesPersonInput } from 'types/graphql'
 import type { RWGqlError } from '@redwoodjs/forms'
 
 type FormSalesPerson = NonNullable<EditSalesPersonById['salesPerson']>
@@ -115,13 +116,17 @@ const SalesPersonForm = (props: SalesPersonFormProps) => {
           Variance
         </Label>
 
-        <TextField
+        <SelectField
           name="variance"
           defaultValue={props.salesPerson?.variance}
           className="rw-input"
           errorClassName="rw-input rw-input-error"
           validation={{ required: true }}
-        />
+        >
+          <option value="low">low</option>
+          <option value="medium">medium</option>
+          <option value="high">high</option>
+        </SelectField>
 
         <FieldError name="variance" className="rw-field-error" />
 
@@ -151,13 +156,17 @@ const SalesPersonForm = (props: SalesPersonFormProps) => {
           Status
         </Label>
 
-        <TextField
+        <SelectField
           name="status"
           defaultValue={props.salesPerson?.status}
           className="rw-input"
           errorClassName="rw-input rw-input-error"
           validation={{ required: true }}
-        />
+        >
+          <option value="underperforming">underperforming</option>
+          <option value="overperforming">overperforming</option>
+          <option value="average">average</option>
+        </SelectField>
 
         <FieldError name="status" className="rw-field-error" />
 
@@ -169,13 +178,19 @@ const SalesPersonForm = (props: SalesPersonFormProps) => {
           Delta type
         </Label>
 
-        <TextField
+        <SelectField
           name="deltaType"
           defaultValue={props.salesPerson?.deltaType}
           className="rw-input"
           errorClassName="rw-input rw-input-error"
           validation={{ required: true }}
-        />
+        >
+          <option value="moderateDecrease">moderateDecrease</option>
+          <option value="increase">increase</option>
+          <option value="unchanged">unchanged</option>
+          <option value="moderateIncrease">moderateIncrease</option>
+          <option value="moderateDecrease">moderateDecrease</option>
+        </SelectField>
 
         <FieldError name="deltaType" className="rw-field-error" />
 

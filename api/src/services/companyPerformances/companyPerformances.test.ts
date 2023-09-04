@@ -41,17 +41,17 @@ describe('companyPerformances', () => {
   scenario('creates a companyPerformance', async () => {
     const result = await createCompanyPerformance({
       input: {
-        date: 'String',
-        sales: 2494455.5866956785,
-        profit: 9237431.41915011,
-        customers: 1490105,
+        date: '2023-09-04T16:42:31.883Z',
+        Sales: 1710517.558160818,
+        Profit: 378941.0764930223,
+        Customers: 3647439,
       },
     })
 
-    expect(result.date).toEqual('String')
-    expect(result.sales).toEqual(new Prisma.Decimal(2494455.5866956785))
-    expect(result.profit).toEqual(new Prisma.Decimal(9237431.41915011))
-    expect(result.customers).toEqual(1490105)
+    expect(result.date).toEqual(new Date('2023-09-04T16:42:31.883Z'))
+    expect(result.Sales).toEqual(new Prisma.Decimal(1710517.558160818))
+    expect(result.Profit).toEqual(new Prisma.Decimal(378941.0764930223))
+    expect(result.Customers).toEqual(3647439)
   })
 
   scenario(
@@ -62,10 +62,10 @@ describe('companyPerformances', () => {
       })) as CompanyPerformance
       const result = await updateCompanyPerformance({
         id: original.id,
-        input: { date: 'String2' },
+        input: { date: '2023-09-05T16:42:31.883Z' },
       })
 
-      expect(result.date).toEqual('String2')
+      expect(result.date).toEqual(new Date('2023-09-05T16:42:31.883Z'))
     }
   )
 

@@ -1,10 +1,10 @@
 export const schema = gql`
   type CompanyPerformance {
     id: Int!
-    date: String!
-    sales: Float!
-    profit: Float!
-    customers: Int!
+    date: DateTime!
+    Sales: Float!
+    Profit: Float!
+    Customers: Int!
   }
 
   type Query {
@@ -13,17 +13,17 @@ export const schema = gql`
   }
 
   input CreateCompanyPerformanceInput {
-    date: String!
-    sales: Float!
-    profit: Float!
-    customers: Int!
+    date: DateTime!
+    Sales: Float!
+    Profit: Float!
+    Customers: Int!
   }
 
   input UpdateCompanyPerformanceInput {
-    date: String
-    sales: Float
-    profit: Float
-    customers: Int
+    date: DateTime
+    Sales: Float
+    Profit: Float
+    Customers: Int
   }
 
   type Mutation {

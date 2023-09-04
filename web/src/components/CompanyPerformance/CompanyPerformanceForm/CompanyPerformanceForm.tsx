@@ -1,18 +1,25 @@
+import type {
+  EditCompanyPerformanceById,
+  UpdateCompanyPerformanceInput,
+} from 'types/graphql'
+
 import {
   Form,
   FormError,
   FieldError,
   Label,
+  DatetimeLocalField,
   TextField,
   NumberField,
   Submit,
 } from '@redwoodjs/forms'
-
-import type {
-  EditCompanyPerformanceById,
-  UpdateCompanyPerformanceInput,
-} from 'types/graphql'
 import type { RWGqlError } from '@redwoodjs/forms'
+
+const formatDatetime = (value) => {
+  if (value) {
+    return value.replace(/:\d{2}\.\d{3}\w/, '')
+  }
+}
 
 type FormCompanyPerformance = NonNullable<
   EditCompanyPerformanceById['companyPerformance']
@@ -51,9 +58,9 @@ const CompanyPerformanceForm = (props: CompanyPerformanceFormProps) => {
           Date
         </Label>
 
-        <TextField
+        <DatetimeLocalField
           name="date"
-          defaultValue={props.companyPerformance?.date}
+          defaultValue={formatDatetime(props.companyPerformance?.date)}
           className="rw-input"
           errorClassName="rw-input rw-input-error"
           validation={{ required: true }}
@@ -62,7 +69,7 @@ const CompanyPerformanceForm = (props: CompanyPerformanceFormProps) => {
         <FieldError name="date" className="rw-field-error" />
 
         <Label
-          name="sales"
+          name="Sales"
           className="rw-label"
           errorClassName="rw-label rw-label-error"
         >
@@ -70,17 +77,17 @@ const CompanyPerformanceForm = (props: CompanyPerformanceFormProps) => {
         </Label>
 
         <TextField
-          name="sales"
-          defaultValue={props.companyPerformance?.sales}
+          name="Sales"
+          defaultValue={props.companyPerformance?.Sales}
           className="rw-input"
           errorClassName="rw-input rw-input-error"
           validation={{ valueAsNumber: true, required: true }}
         />
 
-        <FieldError name="sales" className="rw-field-error" />
+        <FieldError name="Sales" className="rw-field-error" />
 
         <Label
-          name="profit"
+          name="Profit"
           className="rw-label"
           errorClassName="rw-label rw-label-error"
         >
@@ -88,17 +95,17 @@ const CompanyPerformanceForm = (props: CompanyPerformanceFormProps) => {
         </Label>
 
         <TextField
-          name="profit"
-          defaultValue={props.companyPerformance?.profit}
+          name="Profit"
+          defaultValue={props.companyPerformance?.Profit}
           className="rw-input"
           errorClassName="rw-input rw-input-error"
           validation={{ valueAsNumber: true, required: true }}
         />
 
-        <FieldError name="profit" className="rw-field-error" />
+        <FieldError name="Profit" className="rw-field-error" />
 
         <Label
-          name="customers"
+          name="Customers"
           className="rw-label"
           errorClassName="rw-label rw-label-error"
         >
@@ -106,14 +113,14 @@ const CompanyPerformanceForm = (props: CompanyPerformanceFormProps) => {
         </Label>
 
         <NumberField
-          name="customers"
-          defaultValue={props.companyPerformance?.customers}
+          name="Customers"
+          defaultValue={props.companyPerformance?.Customers}
           className="rw-input"
           errorClassName="rw-input rw-input-error"
           validation={{ required: true }}
         />
 
-        <FieldError name="customers" className="rw-field-error" />
+        <FieldError name="Customers" className="rw-field-error" />
 
         <div className="rw-button-group">
           <Submit disabled={props.loading} className="rw-button rw-button-blue">

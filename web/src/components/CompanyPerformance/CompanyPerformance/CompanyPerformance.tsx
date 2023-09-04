@@ -2,7 +2,7 @@ import { Link, routes, navigate } from '@redwoodjs/router'
 import { useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/toast'
 
-import {} from 'src/lib/formatters'
+import { timeTag } from 'src/lib/formatters'
 
 import type {
   DeleteCompanyPerformanceMutationVariables,
@@ -63,19 +63,19 @@ const CompanyPerformance = ({ companyPerformance }: Props) => {
             </tr>
             <tr>
               <th>Date</th>
-              <td>{companyPerformance.date}</td>
+              <td>{timeTag(companyPerformance.date)}</td>
             </tr>
             <tr>
               <th>Sales</th>
-              <td>{companyPerformance.sales}</td>
+              <td>{companyPerformance.Sales}</td>
             </tr>
             <tr>
               <th>Profit</th>
-              <td>{companyPerformance.profit}</td>
+              <td>{companyPerformance.Profit}</td>
             </tr>
             <tr>
               <th>Customers</th>
-              <td>{companyPerformance.customers}</td>
+              <td>{companyPerformance.Customers}</td>
             </tr>
           </tbody>
         </table>

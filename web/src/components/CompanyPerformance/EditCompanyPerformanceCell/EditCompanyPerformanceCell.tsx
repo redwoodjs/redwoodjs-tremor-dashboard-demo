@@ -15,9 +15,9 @@ export const QUERY = gql`
     companyPerformance: companyPerformance(id: $id) {
       id
       date
-      sales
-      profit
-      customers
+      Sales
+      Profit
+      Customers
     }
   }
 `
@@ -29,9 +29,9 @@ const UPDATE_COMPANY_PERFORMANCE_MUTATION = gql`
     updateCompanyPerformance(id: $id, input: $input) {
       id
       date
-      sales
-      profit
-      customers
+      Sales
+      Profit
+      Customers
     }
   }
 `
