@@ -1,6 +1,7 @@
 import {
   BadgeDelta,
   Card,
+  DeltaType,
   Flex,
   Metric,
   ProgressBar,
