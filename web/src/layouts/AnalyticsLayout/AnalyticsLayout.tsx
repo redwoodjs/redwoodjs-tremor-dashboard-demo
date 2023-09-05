@@ -7,11 +7,11 @@ type AnalyticsLayoutProps = {
 
 const AnalyticsLayout = ({ children }: AnalyticsLayoutProps) => {
   return (
-    <div className="h-screen bg-slate-50">
+    <main className="h-screen bg-slate-50 dark:bg-slate-950">
       <TabNavigation />
       {children}
       <Footer />
-    </div>
+    </main>
   )
 }
 
