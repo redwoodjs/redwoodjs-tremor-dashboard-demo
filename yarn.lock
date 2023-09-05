@@ -5290,9 +5290,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tremor/react@npm:3.6.6":
-  version: 3.6.6
-  resolution: "@tremor/react@npm:3.6.6"
+"@tremor/react@npm:3.7.0":
+  version: 3.7.0
+  resolution: "@tremor/react@npm:3.7.0"
   dependencies:
     "@floating-ui/react": ^0.19.1
     "@headlessui/react": ^1.7.14
@@ -5305,7 +5305,7 @@ __metadata:
   peerDependencies:
     react: ^18.0.0
     react-dom: ">=16.6.0"
-  checksum: b67bdef578bd709789f45060e0a46686265963db66f37a1cbcef58bbd56d09025e0c1bb65bd8bb4c960891c60f675e4abc4361fe3cce593136aeef3dbaccc5fd
+  checksum: 54d5081e3fc28e9a04e7da93389a3b6f4e046e4b5d94d0cb7e0cf6c87d80e7b571d7f71cc764c04006d37fce36ec6717bc734f2274035dbd46e432346811e851
   languageName: node
   linkType: hard
 
@@ -21409,7 +21409,7 @@ __metadata:
     "@redwoodjs/vite": 6.1.0
     "@redwoodjs/web": 6.1.0
     "@tailwindcss/forms": 0.5.3
-    "@tremor/react": 3.6.6
+    "@tremor/react": 3.7.0
     autoprefixer: 10.4.14
     date-fns: 2.30.0
     humanize-string: 2.1.0
