@@ -10,8 +10,6 @@ import {
 } from '@redwoodjs/forms'
 import type { RWGqlError } from '@redwoodjs/forms'
 
-import DeltaTypesInput from 'src/components/DeltaTypesInput/DeltaTypesInput'
-
 type FormKpi = NonNullable<EditKpiById['kpi']>
 
 export interface KpiFormProps {

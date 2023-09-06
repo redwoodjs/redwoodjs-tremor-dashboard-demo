@@ -14,10 +14,10 @@ CREATE TABLE "Kpi" (
 -- CreateTable
 CREATE TABLE "CompanyPerformance" (
     "id" SERIAL NOT NULL,
-    "date" TEXT NOT NULL,
-    "sales" DECIMAL(65,30) NOT NULL,
-    "profit" DECIMAL(65,30) NOT NULL,
-    "customers" INTEGER NOT NULL,
+    "date" TIMESTAMP(3) NOT NULL,
+    "Sales" DECIMAL(65,30) NOT NULL,
+    "Profit" DECIMAL(65,30) NOT NULL,
+    "Customers" INTEGER NOT NULL,
 
     CONSTRAINT "CompanyPerformance_pkey" PRIMARY KEY ("id")
 );

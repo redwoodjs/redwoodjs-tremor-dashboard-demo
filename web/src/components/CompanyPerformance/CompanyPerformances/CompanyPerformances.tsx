@@ -3,7 +3,7 @@ import { useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/toast'
 
 import { QUERY } from 'src/components/CompanyPerformance/CompanyPerformancesCell'
-import { truncate } from 'src/lib/formatters'
+import { timeTag, truncate } from 'src/lib/formatters'
 
 import type {
   DeleteCompanyPerformanceMutationVariables,
@@ -65,10 +65,10 @@ const CompanyPerformancesList = ({
           {companyPerformances.map((companyPerformance) => (
             <tr key={companyPerformance.id}>
               <td>{truncate(companyPerformance.id)}</td>
-              <td>{truncate(companyPerformance.date)}</td>
-              <td>{truncate(companyPerformance.sales)}</td>
-              <td>{truncate(companyPerformance.profit)}</td>
-              <td>{truncate(companyPerformance.customers)}</td>
+              <td>{timeTag(companyPerformance.date)}</td>
+              <td>{truncate(companyPerformance.Sales)}</td>
+              <td>{truncate(companyPerformance.Profit)}</td>
+              <td>{truncate(companyPerformance.Customers)}</td>
               <td>
                 <nav className="rw-table-actions">
                   <Link

@@ -1,4 +1,13 @@
-import type { SalesPerson } from 'src/components/TableView/TableView'
+export type SalesPerson = {
+  name: string
+  leads: number
+  sales: string
+  quota: string
+  variance: string
+  region: string
+  status: string
+  deltaType: string
+}
 
 export const salesPeople: SalesPerson[] = [
   {

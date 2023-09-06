@@ -10,9 +10,9 @@ export const QUERY = gql`
     companyPerformances {
       id
       date
-      sales
-      profit
-      customers
+      Sales
+      Profit
+      Customers
     }
   }
 `

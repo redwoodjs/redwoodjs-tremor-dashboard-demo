@@ -1,87 +1,111 @@
 import { useState } from 'react'
 
-import { InformationCircleIcon } from '@heroicons/react/outline'
+import { InformationCircleIcon } from '@heroicons/react/solid'
 import {
-  AreaChart,
-  Card,
   Flex,
-  Icon,
-  Text,
   Title,
-  Toggle,
-  ToggleItem,
+  Icon,
+  TabGroup,
+  TabList,
+  Tab,
+  AreaChart,
+  Text,
+  Color,
 } from '@tremor/react'
+import { format, parseISO } from 'date-fns'
 
-export type PerformanceData = {
-  date: string
-  sales: number
-  profit: number
-  customers: number
+const usNumberformatter = (number: number, decimals = 0) =>
+  Intl.NumberFormat('us', {
+    minimumFractionDigits: decimals,
+    maximumFractionDigits: decimals,
+  })
+    .format(Number(number))
+    .toString()
+
+const formatters: { [key: string]: any } = {
+  Sales: (number: number) => `$ ${usNumberformatter(number)}`,
+  Profit: (number: number) => `$ ${usNumberformatter(number)}`,
+  Customers: (number: number) => `${usNumberformatter(number)}`,
+  Delta: (number: number) => `${usNumberformatter(number, 2)}%`,
 }
 
-interface Props {
-  performance: PerformanceData[]
-}
+import type { DailyPerformance } from 'src/data/performance'
 
-// Basic formatters for the chart values
-const dollarFormatter = (value: number) =>
-  `$ ${Intl.NumberFormat('us').format(value).toString()}`
+export default function ChartView({
+  performance,
+  kpiList,
+}: {
+  performance: DailyPerformance[]
+  kpiList: string[]
+}) {
+  const [selectedIndex, setSelectedIndex] = useState(0)
+  const selectedKpi = kpiList[selectedIndex]
 
-const numberFormatter = (value: number) =>
-  `${Intl.NumberFormat('us').format(value).toString()}`
+  const formatPerformance = (performance: DailyPerformance[]) => {
+    return performance.map((item) => {
+      try {
+        return { ...item, date: format(item.date, 'MMM dd') }
+      } catch {
+        return {
+          ...item,
+          date: format(parseISO(item.date as unknown as string), 'MMM dd'),
+        }
+      }
+    })
+  }
 
-const ChartView = ({ performance }: Props) => {
-  const [selectedKpi, setSelectedKpi] = useState('sales')
-  // d = performance
-  // map formatters by selectedKpi
-  const formatters: { [key: string]: any } = {
-    Sales: dollarFormatter,
-    Profit: dollarFormatter,
-    Customers: numberFormatter,
+  const areaChartArgs = {
+    className: 'mt-5 h-72',
+    data: formatPerformance(performance),
+    index: 'date',
+    categories: [selectedKpi],
+    colors: ['blue'] as Color[],
+    showLegend: false,
+    valueFormatter: formatters[selectedKpi],
+    yAxisWidth: 56,
   }
 
   return (
-    <Card>
+    <>
       <div className="justify-between md:flex">
         <div>
           <Flex
-            justifyContent="start"
             className="space-x-0.5"
+            justifyContent="start"
             alignItems="center"
           >
             <Title> Performance History </Title>
             <Icon
               icon={InformationCircleIcon}
               variant="simple"
-              tooltip="Shows day-over-day (%) changes of past performance"
+              tooltip="Shows daily increase or decrease of particular domain"
             />
           </Flex>
-          <Text> Daily increase or decrease per domain </Text>
+          <Text> Daily change per domain </Text>
         </div>
-        <div className="mt-6 md:mt-0">
-          <Toggle
-            color="zinc"
-            defaultValue={selectedKpi}
-            onValueChange={(value) => setSelectedKpi(value)}
-          >
-            <ToggleItem value="sales" text="Sales" />
-            <ToggleItem value="profit" text="Profit" />
-            <ToggleItem value="customers" text="Customers" />
-          </Toggle>
+        <div>
+          <TabGroup index={selectedIndex} onIndexChange={setSelectedIndex}>
+            <TabList color="gray" variant="solid">
+              <Tab>Sales</Tab>
+              <Tab>Profit</Tab>
+              <Tab>Customers</Tab>
+            </TabList>
+          </TabGroup>
         </div>
       </div>
-      <AreaChart
-        data={performance}
-        index="date"
-        categories={[selectedKpi]}
-        colors={['blue']}
-        showLegend={false}
-        valueFormatter={formatters[selectedKpi]}
-        yAxisWidth={56}
-        className="mt-8 h-96"
-      />
-    </Card>
+      {/* web */}
+      <div className="mt-8 hidden sm:block">
+        <AreaChart {...areaChartArgs} />
+      </div>
+      {/* mobile */}
+      <div className="mt-8 sm:hidden">
+        <AreaChart
+          {...areaChartArgs}
+          startEndOnly={true}
+          showGradient={false}
+          showYAxis={false}
+        />
+      </div>
+    </>
   )
 }
-
-export default ChartView

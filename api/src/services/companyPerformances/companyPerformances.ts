@@ -4,7 +4,7 @@ import { db } from 'src/lib/db'
 
 export const companyPerformances: QueryResolvers['companyPerformances'] =
   () => {
-    return db.companyPerformance.findMany()
+    return db.companyPerformance.findMany({ orderBy: { date: 'asc' } })
   }
 
 export const companyPerformance: QueryResolvers['companyPerformance'] = ({

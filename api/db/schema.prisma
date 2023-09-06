@@ -1,5 +1,5 @@
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
@@ -19,11 +19,11 @@ model Kpi {
 }
 
 model CompanyPerformance {
-  id        Int     @id @default(autoincrement())
-  date      String
-  sales     Decimal
-  profit    Decimal
-  customers Int
+  id        Int      @id @default(autoincrement())
+  date      DateTime
+  Sales     Decimal
+  Profit    Decimal
+  Customers Int
 }
 
 model SalesPerson {

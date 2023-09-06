@@ -10,10 +10,6 @@ const TabNavigation = () => {
     { name: 'About', href: routes.about() },
   ]
 
-  function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
-  }
-
   return (
     <div className="px-8">
       <div className="sm:hidden">

@@ -1,16 +1,18 @@
-import TabNavigation from "src/components/TabNavigation/TabNavigation"
-import Footer from "src/components/Footer/Footer"
+import Footer from 'src/components/Footer/Footer'
+import TabNavigation from 'src/components/TabNavigation/TabNavigation'
 
 type AnalyticsLayoutProps = {
   children?: React.ReactNode
 }
 
 const AnalyticsLayout = ({ children }: AnalyticsLayoutProps) => {
-  return <div className="h-screen bg-slate-50">
-    <TabNavigation/>
+  return (
+    <main className="h-screen bg-slate-50 dark:bg-slate-950">
+      <TabNavigation />
       {children}
-    <Footer/>
-    </div>
+      <Footer />
+    </main>
+  )
 }
 
 export default AnalyticsLayout

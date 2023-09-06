@@ -1,48 +1,51 @@
-import { useState } from 'react'
-
-import { Grid, Tab, TabList, Text, Title } from '@tremor/react'
+import {
+  Grid,
+  Title,
+  Text,
+  Tab,
+  TabList,
+  TabGroup,
+  TabPanel,
+  TabPanels,
+} from '@tremor/react'
 
 import { MetaTags } from '@redwoodjs/web'
 
-import ChartViewsCell from 'src/components/ChartViewsCell/ChartViewsCell'
-import KpisCell from 'src/components/KpisCell/KpisCell'
-import TableViewsCell from 'src/components/TableViewsCell/TableViewsCell'
+import ChartViewsCell from 'src/components/ChartViewsCell'
+import KpisCell from 'src/components/KpisCell'
+import TableViewsCell from 'src/components/TableViewsCell'
 
 const DynamicDashboardPage = () => {
-  const [selectedView, setSelectedView] = useState('1')
-
   return (
     <>
       <MetaTags
-        title="Dashboard"
+        title="Dynamic Dashboard"
         description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr."
       />
-      <main className="bg-slate-50 p-6 sm:p-10">
-        <Title>Dashboard</Title>
+      <main className="p-12">
+        <Title>Dynamic Dashboard</Title>
         <Text>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</Text>
-
-        <TabList
-          defaultValue="1"
-          onValueChange={(value) => setSelectedView(value)}
-          className="mt-6"
-        >
-          <Tab value="1" text="Overview" />
-          <Tab value="2" text="Detail" />
-        </TabList>
-
-        {selectedView === '1' ? (
-          <>
-            <Grid numColsLg={3} className="mt-6 gap-6">
-              <KpisCell />
-            </Grid>
-
-            <div className="mt-6">
-              <ChartViewsCell />
-            </div>
-          </>
-        ) : (
-          <TableViewsCell />
-        )}
+        <TabGroup className="mt-6">
+          <TabList>
+            <Tab>Overview</Tab>
+            <Tab>Detail</Tab>
+          </TabList>
+          <TabPanels>
+            <TabPanel>
+              <Grid numItemsMd={2} numItemsLg={3} className="mt-6 gap-6">
+                <KpisCell />
+              </Grid>
+              <div className="mt-6">
+                <ChartViewsCell />
+              </div>
+            </TabPanel>
+            <TabPanel>
+              <div className="mt-6">
+                <TableViewsCell />
+              </div>
+            </TabPanel>
+          </TabPanels>
+        </TabGroup>{' '}
       </main>
     </>
   )
