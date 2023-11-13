@@ -6330,14 +6330,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tailwindcss/forms@npm:0.5.3":
-  version: 0.5.3
-  resolution: "@tailwindcss/forms@npm:0.5.3"
+"@tailwindcss/forms@npm:0.5.7":
+  version: 0.5.7
+  resolution: "@tailwindcss/forms@npm:0.5.7"
   dependencies:
     mini-svg-data-uri: ^1.2.3
   peerDependencies:
     tailwindcss: ">=3.0.0 || >= 3.0.0-alpha.1"
-  checksum: 4881c1d5a9aeaa2eea453dd60a5b7c6671a11f0d74f6075d052a3b4f2d8c7e1f1a42f74fe52421da4c13b19018ab883199f528cd41e6fdb249ed638d3f04cd94
+  checksum: cd29e0c978402ae87a923ae802dcff43f7b050595666cb067321cac2e37a52f61b9d73385cb0a10455548581ddd0d3886815bd6c64a1da06247c0057fa9f4601
   languageName: node
   linkType: hard
 
@@ -25167,7 +25167,7 @@ __metadata:
     "@redwoodjs/forms": 5.2.3
     "@redwoodjs/router": 5.2.3
     "@redwoodjs/web": 5.2.3
-    "@tailwindcss/forms": 0.5.3
+    "@tailwindcss/forms": 0.5.7
     "@tremor/react": 2.9.1
     autoprefixer: 10.4.14
     date-fns: ^2.30.0
