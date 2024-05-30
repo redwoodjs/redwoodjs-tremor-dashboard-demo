@@ -20513,16 +20513,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-tailwindcss@npm:^0.3.0":
-  version: 0.3.0
-  resolution: "prettier-plugin-tailwindcss@npm:0.3.0"
+"prettier-plugin-tailwindcss@npm:^0.6.0":
+  version: 0.6.0
+  resolution: "prettier-plugin-tailwindcss@npm:0.6.0"
   peerDependencies:
     "@ianvs/prettier-plugin-sort-imports": "*"
     "@prettier/plugin-pug": "*"
     "@shopify/prettier-plugin-liquid": "*"
-    "@shufo/prettier-plugin-blade": "*"
     "@trivago/prettier-plugin-sort-imports": "*"
-    prettier: ">=2.2.0"
+    "@zackad/prettier-plugin-twig-melody": "*"
+    prettier: ^3.0
     prettier-plugin-astro: "*"
     prettier-plugin-css-order: "*"
     prettier-plugin-import-sort: "*"
@@ -20530,9 +20530,9 @@ __metadata:
     prettier-plugin-marko: "*"
     prettier-plugin-organize-attributes: "*"
     prettier-plugin-organize-imports: "*"
+    prettier-plugin-sort-imports: "*"
     prettier-plugin-style-order: "*"
     prettier-plugin-svelte: "*"
-    prettier-plugin-twig-melody: "*"
   peerDependenciesMeta:
     "@ianvs/prettier-plugin-sort-imports":
       optional: true
@@ -20540,9 +20540,9 @@ __metadata:
       optional: true
     "@shopify/prettier-plugin-liquid":
       optional: true
-    "@shufo/prettier-plugin-blade":
-      optional: true
     "@trivago/prettier-plugin-sort-imports":
+      optional: true
+    "@zackad/prettier-plugin-twig-melody":
       optional: true
     prettier-plugin-astro:
       optional: true
@@ -20558,13 +20558,13 @@ __metadata:
       optional: true
     prettier-plugin-organize-imports:
       optional: true
+    prettier-plugin-sort-imports:
+      optional: true
     prettier-plugin-style-order:
       optional: true
     prettier-plugin-svelte:
       optional: true
-    prettier-plugin-twig-melody:
-      optional: true
-  checksum: b7c4470097c1c4a9b280fcd89b6853a7afef07dc9596393b6cf90141abdd25bceb5222133aed4b4cd64c1849c09ae446eb54bf560214f5e309a9fbf8ce5af08c
+  checksum: f170691cff3be2a1d5a88a36d9a28a7afa56bf039e3b84c82dcd27a211b759961ebc73d215e9c6a218506bc5e522a81ebe387d38d1ca33d2f9215013eebfd362
   languageName: node
   linkType: hard
 
@@ -22046,7 +22046,7 @@ __metadata:
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
     "@redwoodjs/core": 5.2.3
-    prettier-plugin-tailwindcss: ^0.3.0
+    prettier-plugin-tailwindcss: ^0.6.0
   languageName: unknown
   linkType: soft
 
